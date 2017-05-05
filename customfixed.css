@@ -1,0 +1,203 @@
+.rectangle {
+	background-color: transparent;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.picture {
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 259px;
+	height: 119px;
+	position: absolute;
+	left: 8%;
+	top: 4%;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: black;
+	z-index: -1;
+}
+
+.p1 {
+	background-image: url();
+	background-size: 120px;
+
+}
+
+.p2 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p3 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p4 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p5 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p6 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p7 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p8 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p9 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p10 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p11 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.p12 {
+	background-image: url();
+	background-size: 120px;
+}
+
+.box {
+	width: 270px;
+	height: 120px;
+	background-color: white;
+	position: relative;
+	left: 3%;
+	top: 12%;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: red;
+	transition: width 2s;
+	z-index: 1;
+}
+.box:hover {
+	width: 160px;
+	z-index: 1;
+}
+
+@media screen and (max-width: 980px) {
+	.box {
+		left: 10%;
+		top: 12%;
+	}
+	.picture {
+	left: 13%;
+	top: 4%;
+	}
+}
+
+.video {
+	display: none;
+	height: 120px;
+}
+
+.random-button {
+	background-color: grey;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	margin: auto;
+	background-image: none;
+	transition: background-image 3s;
+}
+
+.button-box {
+	height: 40px;
+}
+.random-button:hover{
+	background-image: url(https://static-cdn.jtvnw.net/jtv_user_pictures/goldglove-profile_image-ebb22ee6cccace23-300x300.png);
+	background-size: 40px;
+	color: white;	
+	text-decoration: none;
+
+}
+
+.header {
+	margin: auto;
+	padding-bottom: 25px;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#form1, #form2, #form3, #form4, #form5, #form6, #form7, #form8, #form9, #form10, #form11, #form12 {
+	padding-top: 10px;
+	margin: auto;
+	display: none;
+}
+
+input[type=text] {
+	border-radius: 4px;
+	padding-left: 4px;
+	width:25%;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	
+}
+
+input[type=text]:focus {
+	border: 2px solid #555;
+	outline: none;
+	width: 32%;
+	padding-left: 4px;
+}
+
+.add-stream1, .add-stream2, .add-stream3, .add-stream4, .add-stream5, .add-stream6, .add-stream7, .add-stream8, .add-stream9, .add-stream10, .add-stream11, .add-stream12 {
+	height: 120px;
+	background-image: url(plus.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-bottom: 23.8px;
+	margin-top: 23.8px;
+}
+
+input[type=button], input[type=submit] {
+    background-color: grey;
+    border-radius: 5px;
+    border-color: grey;
+    color: white;
+    padding: 3px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.chat {
+	display: none;
+	position: right;
+}
+
+.chat-pop {
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	z-index: 2;
+	cursor: move;
+}
