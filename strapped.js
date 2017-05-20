@@ -1,5 +1,5 @@
-
-
+  
+/// Hide/show stream logo, and cover -- Show video player on click ///
 $(document).ready(function(){
     $(".r1").click(function(){
         $(".v1").toggle();
@@ -104,18 +104,19 @@ var links = [
                 'unitlost'
                 ]
 
-
+///Psuedo random link generator ///
 function randomlink(){
 window.location= 'https://twitch.tv/' + links[Math.floor(Math.random()*links.length)]
 }
 
 
-/* shopify button */
+/// shopify button ///
 
-	/* show buttons */
 function showBuy(){
 $('.buy-btn').toggle();
 }
+
+/// Copied from Shopify ///
 
 /*<![CDATA[*/
 

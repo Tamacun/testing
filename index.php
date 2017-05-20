@@ -31,7 +31,7 @@ if (!$con) {
 					<a href="javascript:randomlink()" class="random-button">Random Stream</a>
 				</div>
 					<div class='header-box'>
-						<a href='customstrapped.php' class='random-button'>Custom View Port</a>
+						<a href='test.html' class='random-button'>Custom View Port</a>
 					</div>
 						<div class='header-box'>
 							<a href='javascript:showBuy()' class='random-button'>Promote Your Stream</a>

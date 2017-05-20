@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	html, body {
+		overflow: hidden; 
+		background-color: black;
+		color: green;
+	}
+
+	#bannerAd {
+		height: 80px;
+		width: 700px;
+		background-image: url(bannerAd.svg);
+		float: right;
+		background-repeat: no-repeat;
+	}
+
+	#logo {
+		width:150px;
+		height:80px;
+		float: right;
+
+	}
+
+	#title {
+		float: right;
+	}
+
+	#psuedoHidden {
+		width: 298px;
+		height: 503px;
+ 		overflow: hidden;
+
+	}
+
+	#leftArea {
+		width:300px;
+		height: 520px;
+		overflow-x: hidden;
+		overflow: scroll;
+	}
+
+	#smallVideoContainer {
+		margin-top: 10px;
+	}
+
+	#changeStream, #addStream{
+		float: right;
+		opacity: .25;
+	}
+
+	#changeStream:hover, #addStream:hover{
+		opacity: 1;
+
+	}
+
+	#changeStream:focus, #addStream:focus {
+		outline: 0;
+	}
+
+	#changeChannel1, #changeChannel2, #changeChannel3, #changeChannel4, #changeChannel5 {
+		display: none;	
+		float: left;
+	}
+
+	#userInput1, #userInput2, #userInput3, #userInput4, #userInput5 {
+		width: 100px;
+		background-color: transparent;
+		border: 1px solid black;
+		border-radius: 4px;
+		border-color: black;
+	}
+	#userInput1:-webkit-autofill, #userInput2:-webkit-autofill, #userInput3:-webkit-autofill, #userInput4:-webkit-autofill, #userInput5:-webkit-autofill {
+	    -webkit-box-shadow: 0 0 0 30px black inset;
+	    -webkit-text-fill-color: grey !important;
+	}
+
+
+	#streamSubmit, #popChat {
+		opacity: .5;
+	}
+
+	#streamSubmit:hover, #popChat:hover {
+		opacity: 1;
+	}
+
+	#rightArea {
+		width: 770px;
+		margin: auto;
+		margin-left: 70px;
+	}
+
+
+
+
+</style>
+	<title></title>
+</head>
+
+
+
+<body>
+<div id='mainContainer' class='container'>
+
+	<div id='header'>
+		<div id='headerContainer' class='row'>
+			<div id='bannerAd'>
+				
+			</div>
+		</div>
+	</div>
+
+	<div id='mainArea' class='row'>
+
+	<div id='psuedoHidden' class='col-md-4 col-sm-1'>
+		<div id='leftArea'>
+
+		<!-- Block 1 -->
+			<div id='smallVideoContainer'>
+				<iframe
+					id='smallVideo1'
+				    src="http://player.twitch.tv/?channel=drdisrespectlive&muted=true&autoplay=false"
+				    height="149"
+				    width="300"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+			</iframe>
+
+			<form id='changeChannel1' onsubmit='return false'>
+				<input id='userInput1' placeholder='Twitch ID' onclick=''></input>
+				<input id='streamSubmit' class='btn-xs' type='submit' value='Change' onclick="loadPages1('userInput1' ,'smallVideo1');"></input>
+				<input id='popChat' class='btn-xs' type='submit' value='Chat'></input>
+			</form>
+							<!--Left shows input field, Right Sends Current Video to Main -->
+			<button id='addStream' class="w3-button w3-display-right" onclick="swapMainVideo('smallVideo1');">&#10095;</button>
+			<button id='changeStream' class="w3-button w3-display-left" onclick="toggler('changeChannel1');">&#10094;</button>
+
+			</div>
+
+		<!-- Block 2 -->
+			<div id='smallVideoContainer'>
+				<iframe
+					id='smallVideo2'
+				    src="http://player.twitch.tv/?channel=&muted=true"
+				    height="149"
+				    width="300"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+			</iframe>
+
+			<form id='changeChannel2' onsubmit='return false'>
+				<input id='userInput2' placeholder='Twitch ID' onclick=''></input>
+				<input id='streamSubmit' class='btn-xs' type='submit' value='Change' onclick="loadPages1('userInput2' ,'smallVideo2');"></input>
+				<input id='popChat' class='btn-xs' type='submit' value='Chat'></input>
+			</form>
+
+			<button id='addStream' class="w3-button w3-display-right" onclick="swapMainVideo('smallVideo2')">&#10095;</button>
+			<button id='changeStream' class="w3-button w3-display-left" onclick="toggler('changeChannel2');">&#10094;</button>
+
+			</div>
+
+		<!-- Block 3 -->
+			<div id='smallVideoContainer'>
+				<iframe
+					id='smallVideo3'
+				    src="http://player.twitch.tv/?channel=&muted=true&autoplay=false"
+				    height="149"
+				    width="300"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+			</iframe>
+
+			<form id='changeChannel3' onsubmit='return false'>
+				<input id='userInput3' placeholder='Twitch ID' onclick=''></input>
+				<input id='streamSubmit' class='btn-xs' type='submit' value='Change' onclick="loadPages1('userInput3', 'smallVideo3');"></input>
+				<input id='popChat' class='btn-xs' type='submit' value='Chat'></input>
+			</form>
+							<!--Left shows input field, Right Sends Current Video to Main -->
+			<button id='addStream' class="w3-button w3-display-right" onclick="swapMainVideo('smallVideo3');">&#10095;</button>
+			<button id='changeStream' class="w3-button w3-display-left" onclick="toggler('changeChannel3');">&#10094;</button>
+
+			</div>
+
+		<!-- Block 4 -->
+			<div id='smallVideoContainer'>
+				<iframe
+					id='smallVideo4'
+				    src="http://player.twitch.tv/?channel=&muted=true"
+				    height="149"
+				    width="300"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+			</iframe>
+
+			<form id='changeChannel4' onsubmit='return false'>
+				<input id='userInput4' placeholder='Twitch ID' onclick=''></input>
+				<input id='streamSubmit' class='btn-xs' type='submit' value='Change' onclick="loadPages1('userInput4', 'smallVideo4');"></input>
+				<input id='popChat' class='btn-xs' type='submit' value='Chat'></input>
+			</form>
+
+			<button id='addStream' class="w3-button w3-display-right" onclick="swapMainVideo('smallVideo4');">&#10095;</button>
+			<button id='changeStream' class="w3-button w3-display-left" onclick="toggler('changeChannel4');">&#10094;</button>
+
+			</div>
+
+		<!-- Block 5 -->	
+			<div id='smallVideoContainer'>
+				<iframe
+					id='smallVideo5'
+				    src="http://player.twitch.tv/?channel=&muted=true"
+				    height="149"
+				    width="300"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+				</iframe>
+
+			<form id='changeChannel5' onsubmit='return false'>
+				<input id='userInput5' placeholder='Twitch ID' onclick=''></input>
+				<input id='streamSubmit' class='btn-xs' type='submit' value='Change' onclick="loadPages1('userInput5', 'smallVideo5');"></input>
+				<input id='popChat' class='btn-xs' type='submit' value='Chat'></input>
+			</form>	
+
+			<button id='addStream' class="w3-button w3-display-right" onclick="swapMainVideo('smallVideo5');">&#10095;</button>
+			<button id='changeStream' class="w3-button w3-display-left" onclick="toggler('changeChannel5');">&#10094;</button>
+
+			</div>
+
+			<div id='inputField'>
+				
+			</div>
+
+		</div>
+	</div>
+
+		<div id='rightArea' class='col-md-8'>
+				<iframe
+					id='mainVideo'
+				    src="http://player.twitch.tv/?channel=goldglove&muted=true"
+				    height="550"
+				    width="800"
+				    frameborder="0"
+				    scrolling="no"
+				    allowfullscreen="true">
+				</iframe>
+		</div>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+	//**** Channel Changer *****//
+
+function loadPages1(formId,smallVideoId){
+    var input = document.getElementById(formId).value;
+    document.getElementById(smallVideoId).setAttribute('src', 'http://player.twitch.tv/?channel='+ input +'&autoplay=true&muted=true');
+    alert(formId + smallVideoId);
+}
+
+					//---Left Button--//
+
+function showInput () {
+	document.getElementById('changeChannel').style.display='block';
+
+}
+
+function toggler(formId) {
+	$('#' + formId).toggle(350);
+}
+
+   					//---Right Button--//
+function swapMainVideo(smallVideoId) {
+	var swapVideo = document.getElementById(smallVideoId).src;
+	alert(swapVideo);
+	document.getElementById('mainVideo').setAttribute('src', swapVideo);
+}
+
+</script>
+
+
+</html>
